@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login User</title>
+</head>
+
+<body>
+  <div class="container">
+    <select class="custom-select form-group" id="input11" th:name="week">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="container">
+    <div th:if="${user.userRole == T(com.schedule.proj.model.UserRole).STUDENT}"
+      class="d-flex flex-column justify-content-center">
+      <table class="table table-bordered fullscreen">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col" colspan="3">MONDAY</th>
+            <th scope="col" colspan="3">TUESDAY</th>
+            <th scope="col" colspan="3">WEDNESDAY</th>
+            <th scope="col" colspan="3">THURSDAY</th>
+            <th scope="col" colspan="3">FRIDAY</th>
+
+          </tr>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Group</th>
+            <th scope="col">Teacher</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Group</th>
+            <th scope="col">Teacher</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Group</th>
+            <th scope="col">Teacher</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Group</th>
+            <th scope="col">Teacher</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Group</th>
+            <th scope="col">Teacher</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let elem of multi">
+              <td *ngFor="let el of elem">
+                <a href="/group" class="text-primary">
+                  {{ el }}
+                </a>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+
+</html>

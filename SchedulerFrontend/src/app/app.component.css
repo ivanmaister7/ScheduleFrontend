@@ -1,0 +1,23 @@
+.ct{
+  margin: 0 auto;
+}
+.rg{
+  margin: 0;
+}
+.lf{
+  text-align: left;
+  height: 50px;
+}
+.sp{
+  margin: 0 10px 0;
+}
+.resize{
+  min-width: 100%;
+}
+.dark {
+  color: black;
+}
+.bottom-space {
+  margin-bottom: 50px;
+}
+.invert { filter: invert(100%); }

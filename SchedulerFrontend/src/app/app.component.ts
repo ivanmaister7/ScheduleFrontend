@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'SchedulerFrontend';
+  form: any = {
+    username: null,
+    password: null
+  };
+
+  title = 'NaUKMA Schedule';
+  isLoggedIn = localStorage.getItem("isLoggedIn") == "true" ? true : false;
+  userColor1 = "#000000";
+  userColor2 = "#ffffff";
+
+  reloadPage(): void {
+    window.location.reload()
+  }
+
+  logout(): void {
+    localStorage.setItem("isLoggedIn", "false")
+  }
 }
